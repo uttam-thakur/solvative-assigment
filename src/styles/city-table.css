@@ -1,10 +1,12 @@
 .city-table{
     width: 100vw;
-    border: 2px solid rgb(222, 226, 230);
+    margin-top: 30px;
 }
 
-th td{
+th, td{
     padding: 8px;
+    text-align: center;
+    text-align: inherit !important;
 }
 
 .header{
@@ -13,7 +15,7 @@ th td{
 
 .pagination{
     width: 100vw;
-    height: 20px;
+    height: 30px;
     display: flex;
     justify-content: center;
     border: 1px solid rgb(222, 226, 230);
@@ -21,4 +23,20 @@ th td{
 .pagination-field{
     width: 40px;
     text-align: center;
+}
+
+.page-button{
+    height: 80%;
+    width: 60px;
+    border: 2px solid #7952b3;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.flag{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+
 }
