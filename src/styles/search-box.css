@@ -1,0 +1,28 @@
+/* .searchBox{
+    display: flex;
+    width: 100vw;
+    height: 40px;
+    align-items: flex-end;
+    justify-content: flex-end;
+} */
+
+.search-field{
+    width: 241px;
+    height: 38px;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(206, 212, 218);
+    padding-top: 6px 0px;
+    padding-left: 12px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.focus{
+    border-color: #7952b3;
+    box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
+}
+
+.disable{
+    background-color: rgb(233, 236, 239);
+}
