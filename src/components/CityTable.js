@@ -41,34 +41,22 @@ const CityTable = ({ userSearch }) => {
   };
   useEffect(() => {
     if (pageNumber) {
-      options.params.limit = 5 * pageNumber;
+      options.params.namePrefix = userSearch;
+      options.params.limit = 5*pageNumber;
       axios
         .request(options)
         .then(function (response) {
-          setCityList(response?.data?.data);
-          setRenderCityList(response?.data?.data);
+          const cityListResonse = response?.data?.data;
+          setCityList(cityListResonse);
+          const dataToRender = cityListResonse?.filter((_city, indx) => indx >= 5*(pageNumber-1))
+          setRenderCityList(dataToRender);
+
         })
         .catch(function (error) {
           console.error(error);
         });
     }
-  }, [pageNumber]);
-
-  useEffect(() => {
-    console.log(userSearch, typeof userSearch);
-    if (!userSearch || userSearch == "") {
-      setRenderCityList(cityList);
-      return;
-    }
-    const lower = userSearch.toLowerCase();
-    const userSearchedCity =
-      userSearch.charAt(0).toUpperCase() + lower.slice(1);
-
-    const searchedCity = cityList?.filter((_city) =>
-      _city?.region.match(userSearchedCity)
-    );
-    setRenderCityList(searchedCity);
-  }, [userSearch]);
+  }, [userSearch, pageNumber]);
 
   return (
     <div>

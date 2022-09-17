@@ -1,10 +1,6 @@
-/* .searchBox{
-    display: flex;
-    width: 100vw;
-    height: 40px;
-    align-items: flex-end;
-    justify-content: flex-end;
-} */
+.search-box{
+    margin: 10px;
+}
 
 .search-field{
     width: 241px;
